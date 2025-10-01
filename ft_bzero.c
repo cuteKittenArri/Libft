@@ -1,48 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:36:52 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/01 23:21:30 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/01 23:09:16 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/02 00:10:58 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t				i;
-	unsigned char		*r;
+	int				i;
+	unsigned char	*r;
 
 	r = s;
 	i = 0;
 	while (i < n)
 	{
-		*r = (char)c;
+		*r = '\0';
 		r++;
 		i++;
 	}
-	return (s);
 }
 /*
-#include <stdio.h>
+#include <unistd.h>
 #include <string.h>
+#include <stdio.h>
 
 int main(void)
 {
-	char lol[] = "";
+	char lol[] = "fghjkldasfa";
 	void *leer;
-	void	*leer2;
+	void *leer2;
 
 	leer = lol;
 	leer2 = lol;
 	printf("%s\n", (char *)leer);
-	//printf("%s\n", (char *)leer2);
-	//printf("%s\n", (char *)memset(leer, 35, 4));
-	printf("%s", (char *)ft_memset(leer2, 35, 4));
-	return 0;
+	printf("%s\n", (char *)leer2);
+	ft_bzero(leer, 4);
+	bzero(leer2, 4);
+	write(1, (char *)leer, 8);
+	printf("\n");
+	write(1, (char *)leer2, 8);
 }
 */

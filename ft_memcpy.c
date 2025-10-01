@@ -1,48 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 14:36:52 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/01 23:21:30 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/02 00:12:12 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/02 01:13:44 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t				i;
-	unsigned char		*r;
+	unsigned char		*leer;
+	const unsigned char	*s;
 
-	r = s;
+	s = (const unsigned char *)src;
+	leer = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{
-		*r = (char)c;
-		r++;
+		leer[i] = s[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }
 /*
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 int main(void)
 {
-	char lol[] = "";
-	void *leer;
-	void	*leer2;
+	void *dst;
+	const char *a = "mama4321";
+	const void *sorc = a;
 
-	leer = lol;
-	leer2 = lol;
-	printf("%s\n", (char *)leer);
-	//printf("%s\n", (char *)leer2);
-	//printf("%s\n", (char *)memset(leer, 35, 4));
-	printf("%s", (char *)ft_memset(leer2, 35, 4));
-	return 0;
+	dst = malloc(8);
+	dst = ft_memcpy(dst, sorc, 8);
+	write(1, dst, 8);
 }
 */
