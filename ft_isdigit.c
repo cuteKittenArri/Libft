@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stmuller <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:02:08 by stmuller          #+#    #+#             */
-/*   Updated: 2025/09/30 14:20:22 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/01 15:29:00 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@ int	ft_isdigit(int c)
 {
 	if ('9' >= c && c >= '0')
 	{
-		return (0);
+		return (1);
 	}
-	return (1);
+	return (0);
 }

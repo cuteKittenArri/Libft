@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stmuller <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:49:34 by stmuller          #+#    #+#             */
-/*   Updated: 2025/09/30 14:19:40 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/01 15:29:40 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
 	if (ft_isalpha(c) == 0 && ft_isdigit(c) == 0)
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }

@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 13:08:37 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/01 15:29:41 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/01 14:36:52 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/01 15:58:26 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
-{
-	if ((65 <= c && c <= 90) || (97 <= c && c <= 122))
-		return (1);
-	return (0);
-}
-/*
-#include <stdio.h>
+#include <stddef.h>
 
-int	main(void)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	printf("%d", ft_isalpha('/'));
-}*/
+	size_t				i;
+	unsigned char		*r;
+
+	r = s;
+	i = 0;
+	while (i < n)
+	{
+		*r = (char)c;
+		r++;
+		i++;
+	}
+	return (s);
+}
+
+TODO: TESTCASE(main)

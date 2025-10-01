@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stmuller <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:53:45 by stmuller          #+#    #+#             */
-/*   Updated: 2025/09/30 14:20:03 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/01 15:29:42 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
 	if (0 <= c && c <= 127)
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
