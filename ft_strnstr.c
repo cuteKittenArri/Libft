@@ -1,40 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 23:43:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/09/30 23:55:42 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/01 13:43:12 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/01 13:47:28 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *s, int c)
-{
-	const char	*start;
+#include <stddef.h>
 
-	start = s;
-	while (*s)
-		s++;
-	while (s != start)
+char *ft_strnstr(const char *big, const char *little, size_t len)
+{
+	int	i;
+	int	l;
+
+	i = 0;
+	if (! *little)
 	{
-		if (*s == c)
-			return ((char *)s);
-		s--;
+		return ((char *)big);
 	}
-	if (*s == c)
-		return ((char *)s);
+	while (big[i] && len > (size_t)i)
+	{
+		l = 0;
+		while (little[l] == big[i + l])
+		{
+			l++;
+		}
+		if (little[l] == '\0')
+		{
+			return ((char *)&big[i]);
+		}
+		i++;
+	}
 	return (0);
 }
 /*
-#include <unistd.h>
 #include <stdio.h>
 
 int main(void)
 {
-	char *lathyrus = ft_strrchr("mamapapa", 't');
-	write(1, lathyrus, 3);
-	printf("%s", lathyrus);
+	printf("%s", ft_strnstr("", "3", 20));
 }
 */
