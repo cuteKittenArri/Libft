@@ -6,33 +6,37 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 01:26:04 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 18:09:03 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/02 19:44:31 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-void    *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-    size_t	i;
-	unsigned char *dstcpy;
-	const unsigned char *srccpy;
-	unsigned char cpy[n];
+	size_t				i;
+	unsigned char		*dstcpy;
+	const unsigned char	*srccpy;
 
-	srccpy = src;
-	dstcpy = dest;
 	i = 0;
-	while (i < n)
+	dstcpy = (unsigned char *)dest;
+	srccpy = (const unsigned char *)src;
+	if (dest < src)
 	{
-		cpy[i] = srccpy[i];
-		i++;
+		while (i < n)
+		{
+			dstcpy[i] = srccpy[i];
+			i++;
+		}
 	}
-	i = 0;
-	while (i < n)
+	else if (dest > src)
 	{
-		dstcpy[i] = cpy[i];
-		i++;
+		while (i < n)
+		{
+			dstcpy[n] = srccpy[n];
+			n--;
+		}
 	}
 	return (dest);
 }
