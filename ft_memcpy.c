@@ -6,11 +6,12 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 00:12:12 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 01:24:08 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/02 18:05:29 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
