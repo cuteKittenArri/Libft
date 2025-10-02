@@ -6,11 +6,13 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 14:36:52 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 01:24:07 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/02 14:21:19 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <libft.h>
+
 
 void	*ft_memset(void *s, int c, size_t n)
 {
