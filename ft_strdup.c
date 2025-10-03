@@ -1,48 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 15:50:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:22:40 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/03 00:36:16 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/03 01:02:46 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_atoi(const char *nptr)
+char	*ft_strdup(const char *s)
 {
-	int	result;
-	int	minus;
+	int		i;
+	char	*s2;
 
-	result = 0;
-	minus = 1;
-	while ((9 <= *nptr && *nptr <= 13) || *nptr == ' ')
+	i = 0;
+	s2 = malloc(ft_strlen(s));
+	while (s[i])
 	{
-		nptr++;
+		s2[i] = s[i];
+		i++;
 	}
-	if (*nptr == '-')
-	{
-		minus = -1;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	while ('0' <= *nptr && *nptr <= '9')
-	{
-		result = result * 10 +(*nptr -48);
-		nptr++;
-	}
-	return (result * minus);
+	return (s2);
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
 
-int	main(void)
+int main(void)
 {
-	printf("%d\n", atoi("123"));
-	printf("%d", ft_atoi("123"));
-}*/
+    const char *s1 = "halloStefan";
+    char *s2 = ft_strdup(s1);
+    const char *ss1 = "halloStefan";
+    char *ss2 = ft_strdup(ss1);
+
+    printf("%s\n", s2);
+    printf("%s\n", ss2);
+}
+*/

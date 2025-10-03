@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: stmuller <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:28:44 by stmuller          #+#    #+#             */
-/*   Updated: 2025/09/30 15:35:33 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/02 23:26:06 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-unsigned int	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	unsigned int	r;
 	unsigned int	i;

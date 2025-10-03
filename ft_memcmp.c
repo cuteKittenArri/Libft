@@ -1,48 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 15:50:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:22:40 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/02 23:40:10 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/03 01:00:49 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	result;
-	int	minus;
+	const char	*s1cpy;
+	const char	*s2cpy;
+	size_t		i;
 
-	result = 0;
-	minus = 1;
-	while ((9 <= *nptr && *nptr <= 13) || *nptr == ' ')
+	i = 0;
+	s1cpy = (const char *)s1;
+	s2cpy = (const char *)s2;
+	while (i < n)
 	{
-		nptr++;
+		if (*s1cpy != *s2cpy)
+		{
+			return (*s1cpy - *s2cpy);
+		}
+		s1cpy++;
+		s2cpy++;
+		i++;
 	}
-	if (*nptr == '-')
-	{
-		minus = -1;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	while ('0' <= *nptr && *nptr <= '9')
-	{
-		result = result * 10 +(*nptr -48);
-		nptr++;
-	}
-	return (result * minus);
+	return (0);
 }
 /*
+#include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-int	main(void)
+int main(void)
 {
-	printf("%d\n", atoi("123"));
-	printf("%d", ft_atoi("123"));
-}*/
+    const char *s1 = "cccb";
+    const char *s2 = "cccc";
+    
+    printf("%d\n", ft_memcmp((const void *)s1, (const void *)s2, 4));
+}
+*/

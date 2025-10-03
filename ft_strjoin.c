@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 15:50:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:22:40 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/03 02:23:35 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/03 02:56:48 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_atoi(const char *nptr)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	result;
-	int	minus;
+	size_t	i;
+	char	*dst;
 
-	result = 0;
-	minus = 1;
-	while ((9 <= *nptr && *nptr <= 13) || *nptr == ' ')
-	{
-		nptr++;
-	}
-	if (*nptr == '-')
-	{
-		minus = -1;
-		nptr++;
-	}
-	else if (*nptr == '+')
-		nptr++;
-	while ('0' <= *nptr && *nptr <= '9')
-	{
-		result = result * 10 +(*nptr -48);
-		nptr++;
-	}
-	return (result * minus);
+	i = (ft_strlen(s1) + ft_strlen(s2));
+	dst = malloc(i);
+	(void)ft_strlcpy(dst, s1, ft_strlen(s1) + 1);
+	(void)ft_strlcat(dst, s2, i + 1);
+	return (dst);
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
-int	main(void)
+int main(void)
 {
-	printf("%d\n", atoi("123"));
-	printf("%d", ft_atoi("123"));
-}*/
+	const char *s1 = "";
+	const char *s2 = "";
+	
+	write(1, s1, 9);
+	printf("\n");
+	write(1, ft_strjoin(s1, s2), 8);
+	printf("\n");
+	write(1, s1, 9);
+}
+*/

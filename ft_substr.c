@@ -1,48 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 15:50:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:22:40 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/03 01:50:25 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/03 02:20:14 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-int	ft_atoi(const char *nptr)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	result;
-	int	minus;
+	size_t	i;
+	char	*sub;
 
-	result = 0;
-	minus = 1;
-	while ((9 <= *nptr && *nptr <= 13) || *nptr == ' ')
+	i = 0;
+	sub = malloc(len);
+	if (ft_strlen(s) <= (size_t)start)
 	{
-		nptr++;
+		return (0);
 	}
-	if (*nptr == '-')
+	while (i < len)
 	{
-		minus = -1;
-		nptr++;
+		sub[i] = s[start];
+		i++;
+		start++;
 	}
-	else if (*nptr == '+')
-		nptr++;
-	while ('0' <= *nptr && *nptr <= '9')
-	{
-		result = result * 10 +(*nptr -48);
-		nptr++;
-	}
-	return (result * minus);
+	return (sub);
 }
 /*
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
 
-int	main(void)
+int main(void)
 {
-	printf("%d\n", atoi("123"));
-	printf("%d", ft_atoi("123"));
-}*/
+	const char *str = "hallom1234";
+	char *sub = ft_substr(str, 11, 2);
+
+	printf("%s\n", str);
+	printf("%s", sub);
+}
+*/

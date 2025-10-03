@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 12:45:47 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:33:54 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/03 00:50:04 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/03 02:21:37 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+#include <stdlib.h>
 
-size_t	ft_strlen(const char *str)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+	void	*array;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (size == 0 || nmemb == 0)
+	{
+		array = malloc(size * nmemb);
+		return (array);
+	}
+	return (0);
 }
