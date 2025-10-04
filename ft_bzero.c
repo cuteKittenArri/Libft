@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 23:09:16 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 14:53:24 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/03 19:24:59 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int				i;
+	size_t			i;
 	unsigned char	*r;
 
 	r = s;
 	i = 0;
 	while (i < n)
 	{
-		*r = '\0';
+		*r = 0;
 		r++;
 		i++;
 	}
