@@ -6,11 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 12:45:47 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/03 15:04:14 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 20:48:39 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

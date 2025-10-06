@@ -6,11 +6,12 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:28:44 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 16:34:18 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 20:48:33 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
