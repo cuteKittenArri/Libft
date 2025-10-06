@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 18:43:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 18:10:37 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 22:59:36 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,6 @@ static char	*ft_int_min(void)
 
 int main(void)
 {
-	printf("%s", ft_itoa(0));
+	printf("%s", ft_itoa(2147483647));
 }
 */

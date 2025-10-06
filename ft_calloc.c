@@ -6,21 +6,28 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 00:50:04 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/03 19:30:49 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 23:28:49 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;
 
-	if (size == 0 || nmemb == 0)
+	if (nmemb == 0 || size == 0)
 	{
-		array = malloc(size * nmemb);
+		array = malloc(1);
 		return (array);
 	}
-	return (0);
+	if ((size > SIZE_MAX / nmemb) || (nmemb > SIZE_MAX / size))
+		return (0);
+	array = malloc(size * nmemb);
+	if (!array)
+		return (array);
+	ft_bzero(array, nmemb * size);
+	return (array);
 }
