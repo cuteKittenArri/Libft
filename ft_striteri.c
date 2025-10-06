@@ -1,42 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 02:23:35 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 16:35:03 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/06 15:32:29 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/06 16:33:52 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
-	char	*dst;
+	unsigned int	i;
+	unsigned int	len;
 
-	i = (ft_strlen(s1) + ft_strlen(s2));
-	dst = malloc(i + 1);
-	(void)ft_strlcpy(dst, s1, ft_strlen(s1) + 1);
-	(void)ft_strlcat(dst, s2, i + 1);
-	return (dst);
+	i = 0;
+	len = ft_strlen(s);
+	while ((i < len))
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 /*
 #include <stdio.h>
-#include <unistd.h>
+
+void    ft_called_function(unsigned int i, char *c)
+{
+    printf("Index: %d Character: %c\n", i, *c);
+    *c = '#';
+}
 
 int main(void)
 {
-	const char *s1 = "";
-	const char *s2 = "";
-	
-	write(1, s1, 9);
-	printf("\n");
-	write(1, ft_strjoin(s1, s2), 8);
-	printf("\n");
-	write(1, s1, 9);
+    char str[] = "hallo, Andy";
+
+    printf("%s\n", str);
+    ft_striteri(str, ft_called_function);
+    printf("%s\n", str);
 }
 */

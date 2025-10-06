@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 01:50:25 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/03 02:20:14 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 15:37:04 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 
 	i = 0;
-	sub = malloc(len);
-	if (ft_strlen(s) <= (size_t)start)
-	{
+	sub = malloc(len + 1);
+	if (!sub)
 		return (0);
-	}
+	if (ft_strlen(s) <= (size_t)start)
+		return (0);
 	while (i < len)
 	{
-		sub[i] = s[start];
+		sub[i] = s[start + i];
 		i++;
-		start++;
 	}
+	sub[i] = '\0';
 	return (sub);
 }
 /*

@@ -1,42 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/03 02:23:35 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 16:35:03 by stmuller         ###   ########.fr       */
+/*   Created: 2025/10/06 14:23:51 by stmuller          #+#    #+#             */
+/*   Updated: 2025/10/06 16:22:25 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
-	char	*dst;
+	unsigned int	i;
+	unsigned int	len;
+	char			*retstr;
 
-	i = (ft_strlen(s1) + ft_strlen(s2));
-	dst = malloc(i + 1);
-	(void)ft_strlcpy(dst, s1, ft_strlen(s1) + 1);
-	(void)ft_strlcat(dst, s2, i + 1);
-	return (dst);
+	i = 0;
+	len = ft_strlen(s);
+	retstr = malloc(len + 1);
+	if (!retstr)
+		return (0);
+	while (i < len)
+	{
+		retstr[i] = f(i, s[i]);
+		i++;
+	}
+	retstr[i] = '\0';
+	return (retstr);
 }
 /*
 #include <stdio.h>
-#include <unistd.h>
+
+char	ft_called_function(unsigned int i, char c)
+{
+	printf("Index: %d Character: %c\n", i, c);
+	return (i + 48);
+}
 
 int main(void)
 {
-	const char *s1 = "";
-	const char *s2 = "";
-	
-	write(1, s1, 9);
-	printf("\n");
-	write(1, ft_strjoin(s1, s2), 8);
-	printf("\n");
-	write(1, s1, 9);
+	printf("%s", ft_strmapi("Hallo, Andy", ft_called_function));
 }
 */

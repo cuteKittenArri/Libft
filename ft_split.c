@@ -6,34 +6,35 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 16:17:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/04 02:22:39 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 14:32:25 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int ft_wordscounter(char const *s, char c);
-int	ft_word_len(char const *s, char c);
+static int	ft_wordscounter(char const *s, char c);
+static int	ft_word_len(char const *s, char c);
+static char	**ft_failed(char **str, size_t n);
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**strarray;
-	int		i;
-	int		n;
+	size_t	i;
+	size_t	n;
 
-	strarray = (char **)malloc(sizeof(char *) *ft_wordscounter(s, c) + 1);
+	strarray = (char **)malloc(sizeof(char *) * ft_wordscounter(s, c) + 1);
 	i = 0;
 	n = 0;
 	if (!strarray || !s)
-	{
-		return (NULL);
-	}
+		return (ft_failed(strarray, 0));
 	while (s[i])
 	{
 		if (s[i] != c)
 		{
 			strarray[n] = ft_substr(s, i, ft_word_len(&s[i], c));
+			if (!strarray[n])
+				return (ft_failed(strarray, n));
 			n++;
 			i = i + ft_word_len(&s[i], c);
 		}
@@ -44,10 +45,21 @@ char **ft_split(char const *s, char c)
 	return (strarray);
 }
 
-int ft_wordscounter(char const *s, char c)
+static char	**ft_failed(char **str, size_t n)
 {
-	int	i;
-	int	words;
+	while (n > 0)
+	{
+		free((void *)str[n]);
+		n--;
+	}
+	free(str);
+	return (0);
+}
+
+static int	ft_wordscounter(char const *s, char c)
+{
+	size_t	i;
+	size_t	words;
 
 	i = 0;
 	words = 0;
@@ -67,7 +79,7 @@ int ft_wordscounter(char const *s, char c)
 	return (words);
 }
 
-int	ft_word_len(char const *s, char c)
+static int	ft_word_len(char const *s, char c)
 {
 	int	i;
 
@@ -92,6 +104,5 @@ int main(void)
 		printf("%s\n", its_aliiive[i]);
 		i++;
 	}
-	
 }
 */

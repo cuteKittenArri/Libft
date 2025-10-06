@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:28:44 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:26:06 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/06 16:34:18 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			dst[i] = src[i];
 			i++;
 		}
-		dst[i] = '\0';
 	}
+	dst[i] = '\0';
 	return (r);
 }
 /*
@@ -43,11 +43,12 @@ int main(void)
 	char dest[20];
 	char dest2[20];
 	const char *src = "halloMam4!";
-	unsigned int size = 15;
+	unsigned int size = 0;
 	unsigned int lol1 = ft_strlcpy(dest, src, size);
 	unsigned int lol2 = strlcpy(dest2, src, size);
 	printf("%s\n", dest);
 	printf("%s\n", dest2);
 	printf("%d\n", lol1);
 	printf("%d\n", lol2);
-}*/
+}
+*/
