@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 00:50:04 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 23:28:49 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/07 15:20:18 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(array, nmemb * size);
 	return (array);
 }
+/*
+#include <unistd.h>
+
+int main(void)
+{
+
+}
+*/

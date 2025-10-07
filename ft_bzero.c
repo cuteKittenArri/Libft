@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 23:09:16 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/03 19:24:59 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/07 15:18:12 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_bzero(void *s, size_t n)
 
 int main(void)
 {
-	char lol[] = "fghjkldasfa";
+	char lol[] = "#############";
 	void *leer;
 	void *leer2;
 

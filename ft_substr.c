@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 01:50:25 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 15:37:04 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/07 16:53:23 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*sub;
 
+	if (len <= 0)
+		return (0);
 	i = 0;
 	sub = malloc(len + 1);
 	if (!sub)
