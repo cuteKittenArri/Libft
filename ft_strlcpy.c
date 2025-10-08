@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:28:44 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:24:12 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 18:40:05 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(&src[i]) + i);
 }
 /*
+#include <bsd/string.h>
+#include <stdio.h>
 
 int main(void)
 {
-	char source1[31] = "Hey Steffi, du bist ein Penner";
-	char *dest1 = source1 + 4;
-	char source2[31] = "Hey Steffi, du bist ein Penner";
-	char *dest4 = source2 + 4;
+	char dest1[31] = "Hey Steffi, du bist ein Penner";
+	char *source1 = dest1 + 4;
+	char dest4[31] = "Hey Steffi, du bist ein Penner";
+	char *source2 = dest4 + 4;
 	unsigned int size = 3;
 	unsigned int lol1 = ft_strlcpy(dest1, source1, size);
 	unsigned int lol2 = strlcpy(dest4, source2, size);

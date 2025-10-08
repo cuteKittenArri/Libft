@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 16:17:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:24:04 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 20:45:01 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	**ft_split(char const *s, char c)
 	size_t	i;
 	size_t	n;
 
-	strarray = (char **)malloc(sizeof(char *) * ft_wordscounter(s, c) + 1);
+	strarray = (char **)malloc(sizeof(char *) * (ft_wordscounter(s, c) + 1));
 	i = 0;
 	n = 0;
 	if (!strarray || !s)

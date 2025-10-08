@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 02:23:35 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:24:09 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 20:34:06 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = (ft_strlen(s1) + ft_strlen(s2));
 	dst = malloc(i + 1);
+	if (!dst)
+		return (0);
 	(void)ft_strlcpy(dst, s1, ft_strlen(s1) + 1);
 	(void)ft_strlcat(dst, s2, i + 1);
 	return (dst);
