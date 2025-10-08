@@ -6,12 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 18:11:24 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:39:25 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:23:52 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -33,9 +32,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (0);
 }
 /*
-#include <string.h>
-#include <unistd.h>
-#include <stdio.h>
 
 int main(void)
 {

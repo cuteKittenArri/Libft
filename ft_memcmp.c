@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 23:40:10 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/03 18:13:58 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:23:53 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /*
-#include <string.h>
-#include <stdio.h>
 
 int main(void)
 {

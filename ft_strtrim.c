@@ -6,12 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 13:26:04 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 19:26:53 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:25 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_howmuch(const char *set, char c);
 
@@ -45,7 +44,6 @@ static int	ft_howmuch(const char *set, char c)
 	return (0);
 }
 /*
-#include <stdio.h>
 
 int main(void)
 {

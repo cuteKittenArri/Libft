@@ -6,11 +6,10 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 01:26:04 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/02 23:35:19 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:23:56 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
@@ -41,9 +40,6 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 /*
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
 
 int main(void)
 {

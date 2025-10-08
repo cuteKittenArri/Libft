@@ -6,12 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/06 15:32:29 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 16:33:52 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:07 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -27,7 +26,6 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 /*
-#include <stdio.h>
 
 void    ft_called_function(unsigned int i, char *c)
 {

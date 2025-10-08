@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 14:36:52 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 20:21:56 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:23:57 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 /*
-#include <stdio.h>
-#include <string.h>
 
 int main(void)
 {

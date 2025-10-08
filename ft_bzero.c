@@ -6,11 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 23:09:16 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/07 15:18:12 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:33:31 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -27,9 +27,6 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 /*
-#include <unistd.h>
-#include <string.h>
-#include <stdio.h>
 
 int main(void)
 {

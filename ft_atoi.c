@@ -38,8 +38,6 @@ int	ft_atoi(const char *nptr)
 	return (result * minus);
 }
 /*
-#include <stdio.h>
-#include <stdlib.h>
 
 int	main(void)
 {

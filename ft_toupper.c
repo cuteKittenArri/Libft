@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:30:29 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 20:49:13 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:30 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_toupper(int c)
 	return (c);
 }
 /*
-#include <stdio.h>
 
 int main(void)
 {

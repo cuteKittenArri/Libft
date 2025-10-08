@@ -6,13 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 00:50:04 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/07 15:20:18 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:31:32 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -32,7 +30,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (array);
 }
 /*
-#include <unistd.h>
 
 int main(void)
 {

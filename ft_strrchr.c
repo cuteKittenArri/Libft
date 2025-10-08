@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 23:43:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 20:48:57 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:23 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 /*
-#include <unistd.h>
-#include <stdio.h>
 
 int main(void)
 {

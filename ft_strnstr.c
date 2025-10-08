@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 13:43:12 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 20:48:53 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:21 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 /*
-#include <stdio.h>
 
 int main(void)
 {

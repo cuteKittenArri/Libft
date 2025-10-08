@@ -6,12 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 02:23:35 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 16:35:03 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:09 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -25,8 +24,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (dst);
 }
 /*
-#include <stdio.h>
-#include <unistd.h>
 
 int main(void)
 {

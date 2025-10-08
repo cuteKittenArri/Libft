@@ -6,12 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/03 16:17:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 14:32:25 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:24:04 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_wordscounter(char const *s, char c);
 static int	ft_word_len(char const *s, char c);
@@ -91,7 +90,6 @@ static int	ft_word_len(char const *s, char c)
 	return (i);
 }
 /*
-#include <stdio.h>
 
 int main(void)
 {

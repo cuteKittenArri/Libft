@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:08:37 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 20:47:45 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:23:46 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_isalpha(int c)
 	return (0);
 }
 /*
-#include <stdio.h>
 
 int	main(void)
 {

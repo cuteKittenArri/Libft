@@ -6,12 +6,11 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 18:43:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/06 22:59:36 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/08 17:23:50 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_intlen(int n);
 static char	*ft_int_min(void);
@@ -71,7 +70,6 @@ static char	*ft_int_min(void)
 	return (minint);
 }
 /*
-#include <stdio.h>
 
 int main(void)
 {
