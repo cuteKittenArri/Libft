@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 13:43:12 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:24:21 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/10 22:11:04 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,19 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	l;
+	size_t	i;
+	size_t	l;
 
 	i = 0;
 	if (! *little)
 	{
 		return ((char *)big);
 	}
-	while (big[i] && len > (size_t)i)
+	while (big[i] && len > i)
 	{
 		l = 0;
-		while (little[l] == big[i + l])
+		while ((i + l) < len && little[l] && big[i + l]
+			&& little[l] == big[i + l])
 		{
 			l++;
 		}
@@ -37,10 +38,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*
+
+/* #include <stdio.h>
+#include <bsd/string.h>
 
 int main(void)
 {
-	printf("%s", ft_strnstr("", "3", 20));
-}
-*/
+	char string[] = "Hello world. 42 is the answer to the universe, to 
+	everything, based on hitchhiker's guide to the galaxy";
+	char *ft_ptr = ft_strnstr(string, "galaxy", 150);
+    char *std_ptr = strnstr(string, "galaxy", 150);
+	printf("%s \n", ft_ptr);
+	printf("%s \n", std_ptr);
+	printf("%zu", ft_strlen(string));
+} */

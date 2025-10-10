@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/01 11:55:29 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:24:20 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/10 22:14:17 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,20 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while ((s1[i] || s2[i]) && i < (int)n)
 	{
-		if (s1[i] < s2[i])
-			return (-1);
-		else if (s1[i] > s2[i])
-			return (1);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
 	return (0);
 }
-/*
+
+/* #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-	printf("%d\n", ft_strncmp("", "", 4));
-	printf("%d", strncmp("", "", 4));
-}*/
+	char s1[10] = "absdef";
+	char s2[10] = "abcdef";
+	printf("%d\n", ft_strncmp(s1, s2, 6));
+	printf("%d", strncmp(s1, s2, 6));
+} */
