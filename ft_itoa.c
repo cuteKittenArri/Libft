@@ -6,14 +6,13 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/04 18:43:33 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:23:50 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/11 01:41:20 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	ft_intlen(int n);
-static char	*ft_int_min(void);
 
 char	*ft_itoa(int n)
 {
@@ -25,7 +24,7 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		if (n == -2147483648)
-			return (ft_int_min());
+			return (ft_strdup("-2147483648"));
 		minus = 1;
 		n = n * (-1);
 	}
@@ -34,7 +33,7 @@ char	*ft_itoa(int n)
 	if (!istr)
 		return (NULL);
 	istr[i + minus] = '\0';
-	while (--i >= 0)
+	while (--i + minus >= 0)
 	{
 		istr[i + minus] = (char)(n % 10) + 48;
 		n = n / 10;
@@ -59,20 +58,11 @@ static int	ft_intlen(int n)
 	return (i);
 }
 
-static char	*ft_int_min(void)
-{
-	char	*minint;
-
-	minint = malloc(11);
-	if (!minint)
-		return (NULL);
-	minint = "-2147483648";
-	return (minint);
-}
-/*
+/* #include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
-	printf("%s", ft_itoa(2147483647));
-}
-*/
+	char *test = ft_itoa(2147483647);
+	printf("%s", test);
+} */

@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 23:43:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:24:23 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/11 01:44:16 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,20 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*start;
+	const char		*start;
+	unsigned char	a;
 
+	a = c;
 	start = s;
 	while (*s)
 		s++;
 	while (s != start)
 	{
-		if (*s == c)
+		if (*s == a)
 			return ((char *)s);
 		s--;
 	}
-	if (*s == c)
+	if (*s == a)
 		return ((char *)s);
 	return (0);
 }

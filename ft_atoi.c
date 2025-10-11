@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 15:50:31 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/07 15:16:53 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/10 22:35:39 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * minus);
 }
-/*
+
+/* #include <stdlib.h>
+#include <stdio.h>
 
 int	main(void)
 {
-	printf("%d\n", atoi());
-	printf("%d", ft_atoi());
-}
-*/
+	printf("%d\n", atoi("143523452323525235"));
+	printf("%d", ft_atoi("143523452323525235"));
+} */

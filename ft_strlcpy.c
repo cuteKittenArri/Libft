@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 14:28:44 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 18:40:05 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/11 02:20:48 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,31 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 			dst[i] = src[i];
 			i++;
 		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
 	return (ft_strlen(&src[i]) + i);
 }
-/*
-#include <bsd/string.h>
+
+/* #include <bsd/string.h>
 #include <stdio.h>
 
 int main(void)
 {
+	char src[] = "coucou";
+	char dest[10]; 
+	memset(dest, 'A', 10);
+	printf("%c\n", dest[0]);
+	printf("%zu\n", ft_strlcpy(dest, src, -200));
+	printf("%c\n", dest[0]);
+	printf("%zu\n", ft_strlen(src));
+	printf("%s\n", "-------------------------");
+	char src2[] = "coucou";
+	char dest2[10]; 
+	memset(dest2, 'A', 10);
+	printf("%c\n", dest2[0]);
+	printf("%zu\n", strlcpy(dest2, src2, -200));
+	printf("%c\n", dest2[0]);
+	printf("%zu\n", strlen(src2));
 	char dest1[31] = "Hey Steffi, du bist ein Penner";
 	char *source1 = dest1 + 4;
 	char dest4[31] = "Hey Steffi, du bist ein Penner";
@@ -50,4 +65,4 @@ int main(void)
 	printf("return orig: %d\n", lol2);
 
 }
-*/
+ */

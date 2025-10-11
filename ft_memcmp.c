@@ -6,7 +6,7 @@
 /*   By: stmuller <stmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 23:40:10 by stmuller          #+#    #+#             */
-/*   Updated: 2025/10/08 17:23:53 by stmuller         ###   ########.fr       */
+/*   Updated: 2025/10/11 01:41:04 by stmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char	*s1cpy;
-	const char	*s2cpy;
-	size_t		i;
+	const unsigned char	*s1cpy;
+	const unsigned char	*s2cpy;
+	size_t				i;
 
 	i = 0;
-	s1cpy = (const char *)s1;
-	s2cpy = (const char *)s2;
+	s1cpy = (const unsigned char *)s1;
+	s2cpy = (const unsigned char *)s2;
 	while (i < n)
 	{
 		if (*s1cpy != *s2cpy)
@@ -33,13 +33,17 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
+
+/* #include <stdio.h>
+#include <string.h>
 
 int main(void)
 {
-    const char *s1 = "cccb";
-    const char *s2 = "cccc";
+    char s[] = {-127, 0, 127, 0};
+    char s2[] = {0, 0, 127, 0};
+	//char c = -128;
     
-    printf("%d\n", ft_memcmp((const void *)s1, (const void *)s2, 4));
-}
-*/
+    printf("%d\n", ft_memcmp((const void *)s, (const void *)s2, 1));
+	printf("%d\n", memcmp((const void *)s, (const void *)s2, 2));
+	//printf("%c", c);
+} */
